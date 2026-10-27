@@ -28,7 +28,6 @@ def handle_client(conn, addr):
                 break
 
             with string_lock: 
-                # FIXED: Added parentheses to w.strip()
                 word_list = [w.strip() for w in global_string.split(',')] if global_string else []
 
                 if data in word_list:
@@ -82,6 +81,5 @@ def start_server():
     finally: 
         s.close()
 
-# FIXED: Corrected __main__ syntax
 if __name__ == "__main__":
-    start_server()
+    start_server()  

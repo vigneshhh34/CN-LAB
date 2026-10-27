@@ -45,3 +45,4 @@ def check_queue():
 
 check_queue()
 root.mainloop()
+
